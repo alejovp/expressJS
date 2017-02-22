@@ -1,0 +1,17 @@
+{
+  "name": "expressworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Express.js",
+  "dependencies": {
+    "express": "^4.14.1",
+    "expressworks": "^3.4.1",
+    "pug": "^2.0.0-beta11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
