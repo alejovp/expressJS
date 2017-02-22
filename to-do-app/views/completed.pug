@@ -1,0 +1,6 @@
+extend layout
+
+block content
+  ul.list-group
+    each task in compTasks
+      li.list-group-item #{compTasks.indexOf(task) + 1}. #{task}

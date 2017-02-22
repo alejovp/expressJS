@@ -1,0 +1,16 @@
+extend layout
+
+block content
+  form.form-inline(method='post', action='/')
+    a.btn.btn-default(href="/allDone" type='button') All Done
+    |
+    input.form-control.mb-2.mr-sm-2.mb-sm-0(type='text', name='task', placeholder='Write a task')
+    |  
+    button.btn.btn-primary(type='submit') Add
+  ul.list-group(style="list-style:decimal inside")
+    each obj in tasks
+      li.list-group-item
+        a.btn.btn-default(href=`/done/${tasks.indexOf(obj)}` type='button') Done
+        | #{tasks.indexOf(obj) + 1}. #{obj.task}
+        span (Created at: #{obj.date.getFullYear()}/#{obj.date.getMonth() + 1}/#{obj.date.getDay()} #{obj.date.getHours()}:#{obj.date.getMinutes()})
+        a.btn.btn-default(href=`/delete/${tasks.indexOf(obj)}` type='button') Delete
