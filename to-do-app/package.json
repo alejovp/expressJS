@@ -4,12 +4,16 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w public/sass/ -o public/css/",
+    "watch-sass": "nodemon main && sass"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.16.1",
     "express": "^4.14.1",
+    "node-sass": "^4.5.0",
     "pug": "^2.0.0-beta11"
   }
 }

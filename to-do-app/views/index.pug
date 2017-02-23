@@ -2,11 +2,11 @@ extend layout
 
 block content
   form.form-inline(method='post', action='/')
-    a.btn.btn-default(href="/allDone" type='button') All Done
+    a.btn.btn-default.col-sm-1(href="/allDone" type='button') All Done
     |
-    input.form-control.mb-2.mr-sm-2.mb-sm-0(type='text', name='task', placeholder='Write a task')
+    input.col-sm-10(type='text', name='task', placeholder='Write a task')
     |  
-    button.btn.btn-primary(type='submit') Add
+    button.btn.btn-primary.col-sm-1(type='submit') Add
   ul.list-group(style="list-style:decimal inside")
     each obj in tasks
       li.list-group-item

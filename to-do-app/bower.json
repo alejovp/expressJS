@@ -1,0 +1,20 @@
+{
+  "name": "to-do-app",
+  "description": "",
+  "main": "main.js",
+  "authors": [
+    "Alejandro Vazquez <alejovp@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/alejovp/expressJS",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

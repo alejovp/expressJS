@@ -10,11 +10,15 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+app.use(express.static('public'))
+
 app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
   const section = 'To Do List'
-  res.render('index', { section, tasks })
+  const activeList = 'active'
+  const activeComp = ''
+  res.render('index', { section, tasks, activeList, activeComp })
 })
 
 app.get('/delete/:id', (req, res) => {
@@ -46,7 +50,9 @@ app.post('/', (req, res) => {
 
 app.get('/completed', (req, res) => {
   const section = 'Completed'
-  res.render('completed', { section, compTasks })
+  const activeComp = 'active'
+  const activeList = ''
+  res.render('completed', { section, compTasks, activeList, activeComp })
 })
 
 app.listen(3000, console.log('Listening on PORT:3000...'))
